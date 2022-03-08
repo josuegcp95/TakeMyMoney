@@ -10,6 +10,9 @@
 		3307269A27D03CD20034C695 /* PaymentDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307269927D03CD20034C695 /* PaymentDataTableViewController.swift */; };
 		3307269C27D03FBB0034C695 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307269B27D03FBB0034C695 /* Credit.swift */; };
 		3307269E27D03FC80034C695 /* Paypal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307269D27D03FC80034C695 /* Paypal.swift */; };
+		330726C027D6D8AF0034C695 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726BF27D6D8AF0034C695 /* CreditCardViewController.swift */; };
+		330726C227D6D8CE0034C695 /* PayPalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C127D6D8CE0034C695 /* PayPalViewController.swift */; };
+		330726C427D6D9100034C695 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C327D6D9100034C695 /* PaymentViewController.swift */; };
 		33C295EF27CC3082001CECE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C295EE27CC3082001CECE9 /* AppDelegate.swift */; };
 		33C295F127CC3082001CECE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C295F027CC3082001CECE9 /* SceneDelegate.swift */; };
 		33C295F627CC3082001CECE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C295F427CC3082001CECE9 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 		3307269927D03CD20034C695 /* PaymentDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataTableViewController.swift; sourceTree = "<group>"; };
 		3307269B27D03FBB0034C695 /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
 		3307269D27D03FC80034C695 /* Paypal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paypal.swift; sourceTree = "<group>"; };
+		330726BF27D6D8AF0034C695 /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
+		330726C127D6D8CE0034C695 /* PayPalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalViewController.swift; sourceTree = "<group>"; };
+		330726C327D6D9100034C695 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		33C295EB27CC3082001CECE9 /* TakeMyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeMyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C295EE27CC3082001CECE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C295F027CC3082001CECE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				3307269927D03CD20034C695 /* PaymentDataTableViewController.swift */,
+				330726BF27D6D8AF0034C695 /* CreditCardViewController.swift */,
+				330726C127D6D8CE0034C695 /* PayPalViewController.swift */,
+				330726C327D6D9100034C695 /* PaymentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,9 +187,12 @@
 			files = (
 				33C295EF27CC3082001CECE9 /* AppDelegate.swift in Sources */,
 				3307269E27D03FC80034C695 /* Paypal.swift in Sources */,
+				330726C227D6D8CE0034C695 /* PayPalViewController.swift in Sources */,
+				330726C427D6D9100034C695 /* PaymentViewController.swift in Sources */,
 				3307269A27D03CD20034C695 /* PaymentDataTableViewController.swift in Sources */,
 				3307269C27D03FBB0034C695 /* Credit.swift in Sources */,
 				33C295F127CC3082001CECE9 /* SceneDelegate.swift in Sources */,
+				330726C027D6D8AF0034C695 /* CreditCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

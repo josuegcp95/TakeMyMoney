@@ -1,7 +1,6 @@
 //
 //  AppDelegate.swift
 //  TakeMyMoney
-//
 //  Created by Josue Cruz on 2/27/22.
 //
 
