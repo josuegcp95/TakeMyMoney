@@ -49,23 +49,33 @@
                                                 <color key="textColor" white="0.0" alpha="0.74985306289999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-AH-JGt">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-AH-JGt" customClass="CustomStackView" customModule="TakeMyMoney" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="62.999999999999972" width="350" height="35"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QES-hF-jfa">
                                                         <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="35"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Credit"/>
+                                                        <connections>
+                                                            <action selector="creditTapped:" destination="WQd-5n-O3c" eventType="touchUpInside" id="dsd-y7-1Kz"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-6D-qs0">
                                                         <rect key="frame" x="116.66666666666666" y="0.0" width="116.66666666666666" height="35"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Paypal"/>
+                                                        <connections>
+                                                            <action selector="paypalTapped:" destination="WQd-5n-O3c" eventType="touchUpInside" id="VQT-G6-NmW"/>
+                                                            <segue destination="sFm-YJ-h6Z" kind="presentation" modalPresentationStyle="fullScreen" id="xCa-HW-2BJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRC-YE-Yjw">
                                                         <rect key="frame" x="233.33333333333334" y="0.0" width="116.66666666666666" height="35"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Wallet"/>
+                                                        <connections>
+                                                            <action selector="walletTapped:" destination="WQd-5n-O3c" eventType="touchUpInside" id="pzr-IH-Lpi"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -165,7 +175,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxA-5W-Fpm">
                                         <rect key="frame" x="0.0" y="601.66666666666663" width="390" height="120.33333333333337"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save card data for future payments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqF-qb-5ca">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save credit card information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqF-qb-5ca">
                                                 <rect key="frame" x="8" y="8" width="350" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
@@ -176,7 +186,7 @@
                                                 <rect key="frame" x="303" y="12" width="49" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </switch>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzI-h3-R4f">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzI-h3-R4f" customClass="CustomButton" customModule="TakeMyMoney" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="54" width="350" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
@@ -184,6 +194,9 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="proceedToConfirmTapped:" destination="WQd-5n-O3c" eventType="touchUpInside" id="P0Y-ZF-2R0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -201,6 +214,9 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="BaO-Nc-VoO" kind="show" identifier="PaymentViewControllerSegueFromCredit" id="DQf-8k-F20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUO-LV-AHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,23 +263,33 @@
                                                 <color key="textColor" white="0.0" alpha="0.74985306289999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tsv-jD-YPs">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tsv-jD-YPs" customClass="CustomStackView" customModule="TakeMyMoney" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="85" width="350" height="35"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF9-Ps-po2">
                                                         <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="35"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Credit"/>
+                                                        <connections>
+                                                            <action selector="creditTapped:" destination="sFm-YJ-h6Z" eventType="touchUpInside" id="cdt-Ov-zPI"/>
+                                                            <segue destination="WQd-5n-O3c" kind="presentation" modalPresentationStyle="fullScreen" id="gm7-hy-99c"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-Cc-VfG">
                                                         <rect key="frame" x="116.66666666666666" y="0.0" width="116.66666666666666" height="35"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Paypal"/>
+                                                        <connections>
+                                                            <action selector="paypalTapped:" destination="sFm-YJ-h6Z" eventType="touchUpInside" id="Pnn-0i-TUe"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlJ-Gn-DPL">
                                                         <rect key="frame" x="233.33333333333334" y="0.0" width="116.66666666666666" height="35"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Wallet"/>
+                                                        <connections>
+                                                            <action selector="walletTapped:" destination="sFm-YJ-h6Z" eventType="touchUpInside" id="gcM-g3-dMU"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -312,7 +338,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwo-lG-u80">
                                         <rect key="frame" x="0.0" y="541.66666666666663" width="390" height="180.33333333333337"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save card data for future payments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL8-Ah-hhI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save paypal login information" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL8-Ah-hhI">
                                                 <rect key="frame" x="8" y="30" width="350" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
@@ -323,7 +349,7 @@
                                                 <rect key="frame" x="303" y="34" width="49" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </switch>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-Vk-AaM">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-Vk-AaM" customClass="CustomButton" customModule="TakeMyMoney" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="97" width="350" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
@@ -331,6 +357,9 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="proceedToConfirmTapped:" destination="sFm-YJ-h6Z" eventType="touchUpInside" id="A2W-Yp-xp6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -347,16 +376,20 @@
                             <constraint firstItem="50x-O9-Ykh" firstAttribute="bottom" secondItem="G5f-gp-Pi4" secondAttribute="bottom" id="p0Z-E5-hfr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jkt-bT-7D1"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="BaO-Nc-VoO" kind="show" identifier="PaymentViewControllerSegueFromPaypal" id="1D1-ne-Z98"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcT-wk-QmJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="-25"/>
+            <point key="canvasLocation" x="1808" y="-26"/>
         </scene>
         <!--Payment-->
         <scene sceneID="zce-W9-3YL">
             <objects>
-                <viewController title="Payment" id="BaO-Nc-VoO" customClass="PaymentDataTableViewController" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Payment" id="BaO-Nc-VoO" customClass="PaymentViewController" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvM-Tb-Hnh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -417,8 +450,11 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                                <connections>
+                                                    <action selector="editTapped:" destination="BaO-Nc-VoO" eventType="touchUpInside" id="Bni-Kv-qTT"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhc-sg-KdU">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhc-sg-KdU" customClass="CustomButton" customModule="TakeMyMoney" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="277" width="350" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
@@ -426,6 +462,9 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="payTapped:" destination="BaO-Nc-VoO" eventType="touchUpInside" id="pgm-Cn-ARl"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROMO CODE GOES HERE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3CH-eI-xmN">
                                                 <rect key="frame" x="20" y="185" width="350" height="34"/>
@@ -452,13 +491,22 @@
                             <constraint firstItem="u97-LE-Twc" firstAttribute="bottom" secondItem="G8O-mf-evk" secondAttribute="bottom" id="zyK-6f-VD4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YVI-bz-Tx6"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="paymentHolder" destination="jYa-He-bR9" id="Yyo-zP-ujg"/>
+                        <outlet property="paymentInformation" destination="Ewy-Kd-ZaX" id="onI-iA-1tM"/>
+                        <outlet property="paymentLogo" destination="I2j-2p-rLU" id="wsb-2y-USi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFN-as-8b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2343" y="-26"/>
+            <point key="canvasLocation" x="2598" y="-26"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DQf-8k-F20"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Mastercard Logo" width="48" height="48"/>
         <image name="Paypal Logo" width="48" height="48"/>
