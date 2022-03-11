@@ -215,6 +215,10 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="cardCVV" destination="VMx-pL-BAC" id="nxI-EA-Dmf"/>
+                        <outlet property="cardExpirationDate" destination="D9n-Mo-bZj" id="6X2-pi-lVJ"/>
+                        <outlet property="cardHolderFullName" destination="xQm-tY-350" id="Iq6-6F-xcI"/>
+                        <outlet property="cardNumber" destination="nBs-NZ-acu" id="LoE-n1-yYN"/>
                         <segue destination="BaO-Nc-VoO" kind="show" identifier="PaymentViewControllerSegueFromCredit" id="DQf-8k-F20"/>
                     </connections>
                 </viewController>
@@ -324,7 +328,7 @@
                                                 <rect key="frame" x="20" y="63" width="350" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="username"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zq1-KG-jeR">
                                                 <rect key="frame" x="20" y="120" width="350" height="34"/>
@@ -379,6 +383,8 @@
                     <navigationItem key="navigationItem" id="jkt-bT-7D1"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="paypalPassword" destination="zq1-KG-jeR" id="fGu-n1-s5g"/>
+                        <outlet property="paypalUsername" destination="NDr-ji-yt2" id="2qu-QP-SkP"/>
                         <segue destination="BaO-Nc-VoO" kind="show" identifier="PaymentViewControllerSegueFromPaypal" id="1D1-ne-Z98"/>
                     </connections>
                 </viewController>
@@ -389,7 +395,7 @@
         <!--Payment-->
         <scene sceneID="zce-W9-3YL">
             <objects>
-                <viewController title="Payment" id="BaO-Nc-VoO" customClass="PaymentViewController" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentViewController" title="Payment" id="BaO-Nc-VoO" customClass="PaymentViewController" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvM-Tb-Hnh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,7 +478,7 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="one-time-code"/>
                                             </textField>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Mastercard Logo" id="I2j-2p-rLU">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Mastercard" id="I2j-2p-rLU">
                                                 <rect key="frame" x="8" y="77" width="35" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -505,9 +511,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DQf-8k-F20"/>
+        <segue reference="1D1-ne-Z98"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Mastercard" width="48" height="48"/>
         <image name="Mastercard Logo" width="48" height="48"/>
         <image name="Paypal Logo" width="48" height="48"/>
         <image name="Promo Card" width="640" height="418"/>
