@@ -6,6 +6,13 @@ import UIKit
 
 class PayPalViewController: UIViewController {
     
+    // ERROR ENUMERATION
+    enum LoginError: Error {
+        case incompleteForm
+        case invalidEmail
+        case incorrectPasswordLength
+    }
+    
     // OUTLETS
     @IBOutlet weak var paypalUsername: UITextField!
     @IBOutlet weak var paypalPassword: UITextField!
@@ -43,10 +50,47 @@ class PayPalViewController: UIViewController {
     }
     
     @IBAction func walletTapped (_ sender: UIButton) {
-        Alert.showBasicAlert(on: self, with: "Feature not available yet", message: "Press OK to continue")
+        Alert.showBasicAlert(vc: self, title: "Feature not available yet", message: "Press OK to continue")
     }
     
     @IBAction func proceedToConfirmTapped (_ sender: UIButton) {
+     
+        do {
+            // Transitions to next screen
+            try login()
+            
+        } catch LoginError.incompleteForm {
+            Alert.showBasicAlert(vc: self, title: "Incomplete Form", message: "Please fill out both email and password fields")
+            
+        } catch LoginError.invalidEmail {
+            Alert.showBasicAlert(vc: self, title: "Invalid Email Format", message: "Please make sure you format your email correctly")
+            
+        } catch LoginError.incorrectPasswordLength {
+            Alert.showBasicAlert(vc: self, title: "Password Too Short", message: "Password should be at least 8 characters")
+            
+        } catch {
+            Alert.showBasicAlert(vc: self, title: "Unable To Login", message: "There was an error when attempting to login")
+        }
+    }
+    
+    // LOGIN FUCTION
+    func login() throws {
+        
+        let email = paypalUsername.text!
+        let password = paypalPassword.text!
+        
+        if email.isEmpty || password.isEmpty {
+            throw LoginError.incompleteForm
+        }
+        
+        if !email.isValidEmail {
+            throw LoginError.invalidEmail
+        }
+        
+        if password.count < 8 {
+            throw LoginError.incorrectPasswordLength
+        }
+        // Transitions to next screen
         if let controller = storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController {
             controller.logo = "Paypal"
             controller.holder = "Paypal"
@@ -54,5 +98,4 @@ class PayPalViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
     }
-    
 }

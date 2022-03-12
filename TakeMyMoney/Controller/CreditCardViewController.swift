@@ -12,7 +12,6 @@ class CreditCardViewController: UIViewController {
     @IBOutlet weak var cardExpirationDate: UITextField!
     @IBOutlet weak var cardCVV: UITextField!
     
-    
     // VIEW DID LOAD
     override func viewDidLoad() {
        super.viewDidLoad()
@@ -46,15 +45,17 @@ class CreditCardViewController: UIViewController {
     }
     
     @IBAction func walletTapped (_ sender: UIButton) {
-        Alert.showBasicAlert(on: self, with: "Feature not available yet", message: "Press OK to continue")
+        Alert.showBasicAlert(vc: self, title: "Feature not available yet", message: "Press OK to continue")
     }
     
     @IBAction func proceedToConfirmTapped (_ sender: UIButton) {
         
         if let controller = storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController {
+            let number = cardNumber.text
+            let last2 = String(number!.suffix(2))
             controller.logo = "Mastercard"
             controller.holder = cardHolderFullName.text
-            controller.information = cardNumber.text
+            controller.information = "Master Card ending **\(last2)"
             present(controller, animated: true, completion: nil)
         }
     }

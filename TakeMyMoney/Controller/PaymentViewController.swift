@@ -51,7 +51,6 @@ class PaymentViewController: UIViewController {
     }
     
     @IBAction func payTapped (_ sender: UIButton) {
-        Alert.showBasicAlert(on: self, with: "Payment failed", message: "Press OK to try again")
+        Alert.showBasicAlert(vc: self, title: "Payment failed", message: "Press OK to try again")
     }
-    
 }
