@@ -1,9 +1,6 @@
-//
-//  Alert.swift
-//  TakeMyMoney
-//
-//  Created by Josue Cruz on 3/10/22.
-//
+
+
+
 
 import UIKit
 

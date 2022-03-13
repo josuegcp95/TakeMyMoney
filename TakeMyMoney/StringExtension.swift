@@ -14,4 +14,10 @@ extension String {
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
         return emailPredicate.evaluate(with: self)
     }
+    
+    var doStringContainsNumber: Bool {
+        let numberRegEx  = ".*[0-9]+.*"
+        let numberPredicate = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+        return numberPredicate.evaluate(with: self)
+    }
 }

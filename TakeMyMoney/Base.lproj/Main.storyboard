@@ -112,6 +112,13 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" secureTextEntry="YES" textContentType="cc-number"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid Card Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEe-q2-E4O">
+                                                <rect key="frame" x="105" y="41.000000000000028" width="160" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                     </view>
@@ -134,7 +141,7 @@
                                                             <constraint firstAttribute="width" constant="150" id="ev2-mO-NES"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
+                                                        <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="***" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="VMx-pL-BAC">
                                                         <rect key="frame" x="200" y="0.0" width="150" height="37"/>
@@ -146,6 +153,20 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid Expiration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnR-r9-m3J">
+                                                <rect key="frame" x="20" y="50" width="140" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid CVV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngU-Ha-Afb">
+                                                <rect key="frame" x="240" y="50" width="100" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <constraints>
@@ -169,6 +190,13 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="name"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdG-8O-IwA">
+                                                <rect key="frame" x="123" y="30.999999999999943" width="120" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                     </view>
@@ -219,12 +247,16 @@
                         <outlet property="cardExpirationDate" destination="D9n-Mo-bZj" id="6X2-pi-lVJ"/>
                         <outlet property="cardHolderFullName" destination="xQm-tY-350" id="Iq6-6F-xcI"/>
                         <outlet property="cardNumber" destination="nBs-NZ-acu" id="LoE-n1-yYN"/>
+                        <outlet property="invalidCVV" destination="ngU-Ha-Afb" id="b57-tH-3fg"/>
+                        <outlet property="invalidCardNumber" destination="rEe-q2-E4O" id="lNl-f6-5qz"/>
+                        <outlet property="invalidExpiration" destination="lnR-r9-m3J" id="ImV-TJ-vHn"/>
+                        <outlet property="invalidName" destination="DdG-8O-IwA" id="z4N-iJ-eaq"/>
                         <segue destination="BaO-Nc-VoO" kind="show" identifier="PaymentViewControllerSegueFromCredit" id="DQf-8k-F20"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUO-LV-AHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995" y="-25"/>
+            <point key="canvasLocation" x="993.84615384615381" y="-25.592417061611375"/>
         </scene>
         <!--Paypal-->
         <scene sceneID="hsG-ln-B2f">
@@ -529,6 +561,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -13,7 +13,7 @@
 		330726C627D6E2140034C695 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C527D6E2140034C695 /* CustomButton.swift */; };
 		330726C827D6E26D0034C695 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C727D6E26D0034C695 /* CustomStackView.swift */; };
 		330726CA27DAAA240034C695 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C927DAAA240034C695 /* Alert.swift */; };
-		330726CE27DC36D00034C695 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726CD27DC36CF0034C695 /* String+Extension.swift */; };
+		330726CE27DC36D00034C695 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726CD27DC36CF0034C695 /* StringExtension.swift */; };
 		33C295EF27CC3082001CECE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C295EE27CC3082001CECE9 /* AppDelegate.swift */; };
 		33C295F127CC3082001CECE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C295F027CC3082001CECE9 /* SceneDelegate.swift */; };
 		33C295F627CC3082001CECE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C295F427CC3082001CECE9 /* Main.storyboard */; };
@@ -28,7 +28,7 @@
 		330726C527D6E2140034C695 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		330726C727D6E26D0034C695 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		330726C927DAAA240034C695 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		330726CD27DC36CF0034C695 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		330726CD27DC36CF0034C695 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		33C295EB27CC3082001CECE9 /* TakeMyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeMyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C295EE27CC3082001CECE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C295F027CC3082001CECE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				3307269527D03AF90034C695 /* Service */,
 				33C295EE27CC3082001CECE9 /* AppDelegate.swift */,
 				33C295F027CC3082001CECE9 /* SceneDelegate.swift */,
-				330726CD27DC36CF0034C695 /* String+Extension.swift */,
+				330726CD27DC36CF0034C695 /* StringExtension.swift */,
 				33C295F427CC3082001CECE9 /* Main.storyboard */,
 				33C295F927CC3084001CECE9 /* LaunchScreen.storyboard */,
 				33C295F727CC3084001CECE9 /* Assets.xcassets */,
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				330726C827D6E26D0034C695 /* CustomStackView.swift in Sources */,
-				330726CE27DC36D00034C695 /* String+Extension.swift in Sources */,
+				330726CE27DC36D00034C695 /* StringExtension.swift in Sources */,
 				33C295EF27CC3082001CECE9 /* AppDelegate.swift in Sources */,
 				330726C627D6E2140034C695 /* CustomButton.swift in Sources */,
 				330726C227D6D8CE0034C695 /* PayPalViewController.swift in Sources */,
