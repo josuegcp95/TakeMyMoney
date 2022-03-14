@@ -143,7 +143,7 @@ class CreditCardViewController: UIViewController {
             throw CardError.wrongExperitationDateFieldFormat
         }
         
-        if code.count > 3 {
+        if code.count != 3 {
             throw CardError.incorrectCardCVVLenght
         }
         

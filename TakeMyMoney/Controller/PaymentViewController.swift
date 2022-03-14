@@ -42,6 +42,7 @@ class PaymentViewController: UIViewController {
 
     // ACTIONS
     @IBAction func editTapped (_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func payTapped (_ sender: UIButton) {
         Alert.showBasicAlert(vc: self, title: "Payment failed", message: "Press OK to try again")
