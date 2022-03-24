@@ -15,6 +15,7 @@
 		3335FDA927ECAD4600E93C09 /* PaypalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDA827ECAD4600E93C09 /* PaypalView.swift */; };
 		3335FDAB27ECAFB400E93C09 /* CardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDAA27ECAFB400E93C09 /* CardError.swift */; };
 		3335FDAD27ECB02B00E93C09 /* PaypalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDAC27ECB02B00E93C09 /* PaypalError.swift */; };
+		3335FDAF27ED0E8A00E93C09 /* PaymentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDAE27ED0E8900E93C09 /* PaymentDetails.swift */; };
 		33C295EF27CC3082001CECE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C295EE27CC3082001CECE9 /* AppDelegate.swift */; };
 		33C295F127CC3082001CECE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C295F027CC3082001CECE9 /* SceneDelegate.swift */; };
 		33C295F627CC3082001CECE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C295F427CC3082001CECE9 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		3335FDA827ECAD4600E93C09 /* PaypalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalView.swift; sourceTree = "<group>"; };
 		3335FDAA27ECAFB400E93C09 /* CardError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardError.swift; sourceTree = "<group>"; };
 		3335FDAC27ECB02B00E93C09 /* PaypalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalError.swift; sourceTree = "<group>"; };
+		3335FDAE27ED0E8900E93C09 /* PaymentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetails.swift; sourceTree = "<group>"; };
 		33C295EB27CC3082001CECE9 /* TakeMyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeMyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C295EE27CC3082001CECE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C295F027CC3082001CECE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,10 +74,11 @@
 		3307269827D03B120034C695 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				330726CD27DC36CF0034C695 /* StringExtension.swift */,
 				330726C927DAAA240034C695 /* Alert.swift */,
 				3335FDAA27ECAFB400E93C09 /* CardError.swift */,
 				3335FDAC27ECB02B00E93C09 /* PaypalError.swift */,
+				330726CD27DC36CF0034C695 /* StringExtension.swift */,
+				3335FDAE27ED0E8900E93C09 /* PaymentDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				3335FDAD27ECB02B00E93C09 /* PaypalError.swift in Sources */,
 				3335FDAB27ECAFB400E93C09 /* CardError.swift in Sources */,
 				330726C427D6D9100034C695 /* PaymentViewController.swift in Sources */,
+				3335FDAF27ED0E8A00E93C09 /* PaymentDetails.swift in Sources */,
 				33C295F127CC3082001CECE9 /* SceneDelegate.swift in Sources */,
 				330726CA27DAAA240034C695 /* Alert.swift in Sources */,
 				3335FDA527ECA51600E93C09 /* MainViewController.swift in Sources */,

@@ -46,16 +46,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Credit"/>
+                                                <connections>
+                                                    <action selector="creditTapped:" destination="x5L-46-yQ0" eventType="touchUpInside" id="LTl-uD-Uw8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZG-md-LlQ">
                                                 <rect key="frame" x="116.66666666666666" y="0.0" width="116.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Paypal"/>
+                                                <connections>
+                                                    <action selector="paypalTapped:" destination="x5L-46-yQ0" eventType="touchUpInside" id="GaE-Th-PU2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04X-it-HRQ">
                                                 <rect key="frame" x="233.33333333333334" y="0.0" width="116.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Wallet"/>
+                                                <connections>
+                                                    <action selector="walletTapped:" destination="x5L-46-yQ0" eventType="touchUpInside" id="SsZ-oO-BZq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -83,8 +92,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhF-VC-dno" userLabel="Credit View" customClass="CreditView" customModule="TakeMyMoney" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="232"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82S-aP-fy5">
-                                                        <rect key="frame" x="8" y="8" width="175" height="30"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credit Card Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82S-aP-fy5">
+                                                        <rect key="frame" x="8" y="8" width="250" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="0.74985306289999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,7 +106,7 @@
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Mastercard Logo" id="u5Y-rS-AUM">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Mastercard" id="u5Y-rS-AUM">
                                                         <rect key="frame" x="20" y="60" width="35" height="35"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
@@ -148,6 +157,16 @@
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <connections>
+                                                    <outlet property="cardCVV" destination="9Ty-Fs-MFD" id="X8J-tf-6Zy"/>
+                                                    <outlet property="cardExpirationDate" destination="N4b-JX-84q" id="csR-Oz-0Rz"/>
+                                                    <outlet property="cardHolderFullName" destination="92h-Q9-uz5" id="9OF-yC-HYU"/>
+                                                    <outlet property="cardNumber" destination="E8b-w0-EUF" id="Xhs-0t-jBQ"/>
+                                                    <outlet property="invalidCVV" destination="rps-hI-akH" id="RLQ-X8-ut2"/>
+                                                    <outlet property="invalidCardNumber" destination="dEl-4v-e8e" id="2oY-A5-EHQ"/>
+                                                    <outlet property="invalidExpiration" destination="Dc3-E1-e1j" id="mXS-0S-EJQ"/>
+                                                    <outlet property="invalidName" destination="VWr-ns-5J2" id="sve-pv-Nxw"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -157,7 +176,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5b5-vB-vnD" userLabel="Paypal View" customClass="PaypalView" customModule="TakeMyMoney" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="174"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Paypal Logo" id="gSJ-Ta-psL">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Paypal" id="gSJ-Ta-psL">
                                                         <rect key="frame" x="20" y="15" width="35" height="35"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
@@ -182,6 +201,10 @@
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <connections>
+                                                    <outlet property="paypalPassword" destination="pmU-L8-bKp" id="kIY-6M-vUi"/>
+                                                    <outlet property="paypalUsername" destination="9V9-EJ-eU2" id="Dk0-lW-L7D"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -193,7 +216,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WY4-ZS-e7a" userLabel="Lower View">
                                 <rect key="frame" x="0.0" y="678" width="390" height="132"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save credit card information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9I-ee-YaX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save payment information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9I-ee-YaX">
                                         <rect key="frame" x="8" y="8" width="350" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
@@ -212,6 +235,9 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                             <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="proceedToConfirmTapped:" destination="x5L-46-yQ0" eventType="touchUpInside" id="jwA-HK-aE0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -235,6 +261,12 @@
                             <constraint firstItem="7zN-bV-a0H" firstAttribute="top" secondItem="OwQ-lg-Hwf" secondAttribute="top" id="zQC-3i-6CL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="creditStackView" destination="mLD-g5-Ptf" id="NvT-Bd-CmH"/>
+                        <outlet property="creditView" destination="rhF-VC-dno" id="M4e-w0-17Q"/>
+                        <outlet property="paypalStackView" destination="GWL-Fm-jFf" id="1jD-IU-8WC"/>
+                        <outlet property="paypalView" destination="5b5-vB-vnD" id="dbR-5y-oxf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Thi-Kl-rGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,8 +392,7 @@
     </scenes>
     <resources>
         <image name="Mastercard" width="48" height="48"/>
-        <image name="Mastercard Logo" width="48" height="48"/>
-        <image name="Paypal Logo" width="48" height="48"/>
+        <image name="Paypal" width="48" height="48"/>
         <image name="Promo Card" width="640" height="418"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

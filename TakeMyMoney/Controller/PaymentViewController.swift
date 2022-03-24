@@ -11,18 +11,16 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var paymentHolder: UILabel!
     @IBOutlet weak var paymentInformation: UILabel!
     
-    var logo: String?
-    var holder: String?
-    var information: String?
+    var currentUser: PaymentDetails!
     
     // VIEW DID LOAD
     override func viewDidLoad() {
        super.viewDidLoad()
-        if let logo = logo, let holder = holder, let information = information {
-            paymentLogo.image = UIImage(named: logo)
-            paymentHolder.text = holder
-            paymentInformation.text = information
-        }
+
+        paymentLogo.image = UIImage(named: currentUser.logo)
+        paymentHolder.text = currentUser.holder
+        paymentInformation.text = currentUser.details
+        
         overrideUserInterfaceStyle = .light
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
@@ -34,7 +32,7 @@ class PaymentViewController: UIViewController {
         self.view.endEditing(true)
     }
     @objc func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y = -175 // Move view 150 points upward
+        self.view.frame.origin.y = -225 // Move view 150 points upward
     }
     @objc func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y = 0 // Move view to original position
