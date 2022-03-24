@@ -1,9 +1,6 @@
-//
-//  String+Extension.swift
-//  TakeMyMoney
-//
-//  Created by Josue Cruz on 3/11/22.
-//
+
+
+
 
 import Foundation
 

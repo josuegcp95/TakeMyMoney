@@ -4,63 +4,16 @@
 
 import UIKit
 
-class CreditCardViewController: UIViewController {
-    
-    // OUTLETS
+class CreditView: UIView {
     @IBOutlet weak var cardNumber: UITextField!
     @IBOutlet weak var cardExpirationDate: UITextField!
     @IBOutlet weak var cardCVV: UITextField!
     @IBOutlet weak var cardHolderFullName: UITextField!
-    
+
     @IBOutlet weak var invalidCardNumber: UILabel!
     @IBOutlet weak var invalidExpiration: UILabel!
     @IBOutlet weak var invalidCVV: UILabel!
     @IBOutlet weak var invalidName: UILabel!
-    
-    let datePicker = UIDatePicker()
-    
-    // ERROR ENUMERATION
-    enum CardError: Error {
-        case incompleteField
-        case incorrectCardNumberLenght
-        case wrongExperitationDateFieldFormat
-        case incorrectCardCVVLenght
-        case incorrectCardHolderName
-    }
-    
-    // VIEW DID LOAD
-    override func viewDidLoad() {
-       super.viewDidLoad()
-        overrideUserInterfaceStyle = .light
-        invalidCardNumber.text = ""
-        invalidExpiration.text = ""
-        invalidCVV.text = ""
-        invalidName.text = ""
-        createDatePicker()
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
-    }
-    
-    // KEYBOARD 
-    @objc private func hideKeyboard() {
-        self.view.endEditing(true)
-    }
-    @objc func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y = -175 // Move view 150 points upward
-    }
-    @objc func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y = 0 // Move view to original position
-    }
-  
-    // ACTIONS
-    @IBAction func creditTapped (_ sender: UIButton) {
-    }
-    @IBAction func paypalTapped (_ sender: UIButton) {
-    }
-    @IBAction func walletTapped (_ sender: UIButton) {
-        Alert.showBasicAlert(vc: self, title: "Feature not available yet", message: "Press OK to continue")
-    }
     
     // DATE PICKER
     func createDatePicker () {
@@ -103,19 +56,15 @@ class CreditCardViewController: UIViewController {
             Alert.showBasicAlert(vc: self, title: "Incomplete Fields", message: "Please fill out every field")
             
         } catch CardError.incorrectCardNumberLenght {
-//            Alert.showBasicAlert(vc: self, title: "Invalid Card Number", message: "Please enter correct card numbers")
             invalidCardNumber.text = "Invalid Card Number"
             
         } catch CardError.wrongExperitationDateFieldFormat {
-//            Alert.showBasicAlert(vc: self, title: "Invalid Expiration", message: "Please enter correct expiration date")
             invalidExpiration.text = "Invalid Expiration"
             
         } catch CardError.incorrectCardCVVLenght {
-//            Alert.showBasicAlert(vc: self, title: "Invalid CVV", message: "Please enter correct CVV")
             invalidCVV.text = "Invalid CVV"
             
         } catch CardError.incorrectCardHolderName {
-//            Alert.showBasicAlert(vc: self, title: "Invalid Name", message: "Please enter your name correctly")
             invalidName.text = "Invalid Name"
             
         } catch {
@@ -159,5 +108,11 @@ class CreditCardViewController: UIViewController {
             controller.information = "Master Card ending **\(last2)"
             present(controller, animated: true, completion: nil)
         }
-    }    
+    }
+    
+    
+    
+    
+    
+    
 }

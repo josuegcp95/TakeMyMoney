@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		330726C027D6D8AF0034C695 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726BF27D6D8AF0034C695 /* CreditCardViewController.swift */; };
-		330726C227D6D8CE0034C695 /* PayPalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C127D6D8CE0034C695 /* PayPalViewController.swift */; };
 		330726C427D6D9100034C695 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C327D6D9100034C695 /* PaymentViewController.swift */; };
-		330726C627D6E2140034C695 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C527D6E2140034C695 /* CustomButton.swift */; };
-		330726C827D6E26D0034C695 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C727D6E26D0034C695 /* CustomStackView.swift */; };
 		330726CA27DAAA240034C695 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726C927DAAA240034C695 /* Alert.swift */; };
 		330726CE27DC36D00034C695 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330726CD27DC36CF0034C695 /* StringExtension.swift */; };
+		3335FDA527ECA51600E93C09 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDA427ECA51600E93C09 /* MainViewController.swift */; };
+		3335FDA727ECAD3200E93C09 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDA627ECAD3200E93C09 /* CreditView.swift */; };
+		3335FDA927ECAD4600E93C09 /* PaypalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDA827ECAD4600E93C09 /* PaypalView.swift */; };
+		3335FDAB27ECAFB400E93C09 /* CardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDAA27ECAFB400E93C09 /* CardError.swift */; };
+		3335FDAD27ECB02B00E93C09 /* PaypalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335FDAC27ECB02B00E93C09 /* PaypalError.swift */; };
 		33C295EF27CC3082001CECE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C295EE27CC3082001CECE9 /* AppDelegate.swift */; };
 		33C295F127CC3082001CECE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C295F027CC3082001CECE9 /* SceneDelegate.swift */; };
 		33C295F627CC3082001CECE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C295F427CC3082001CECE9 /* Main.storyboard */; };
@@ -22,13 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		330726BF27D6D8AF0034C695 /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
-		330726C127D6D8CE0034C695 /* PayPalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalViewController.swift; sourceTree = "<group>"; };
 		330726C327D6D9100034C695 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		330726C527D6E2140034C695 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		330726C727D6E26D0034C695 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		330726C927DAAA240034C695 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		330726CD27DC36CF0034C695 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		3335FDA427ECA51600E93C09 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3335FDA627ECAD3200E93C09 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
+		3335FDA827ECAD4600E93C09 /* PaypalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalView.swift; sourceTree = "<group>"; };
+		3335FDAA27ECAFB400E93C09 /* CardError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardError.swift; sourceTree = "<group>"; };
+		3335FDAC27ECB02B00E93C09 /* PaypalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalError.swift; sourceTree = "<group>"; };
 		33C295EB27CC3082001CECE9 /* TakeMyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeMyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C295EE27CC3082001CECE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C295F027CC3082001CECE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,18 +51,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3307269527D03AF90034C695 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		3307269627D03B020034C695 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				330726BF27D6D8AF0034C695 /* CreditCardViewController.swift */,
-				330726C127D6D8CE0034C695 /* PayPalViewController.swift */,
+				3335FDA427ECA51600E93C09 /* MainViewController.swift */,
 				330726C327D6D9100034C695 /* PaymentViewController.swift */,
 			);
 			path = Controller;
@@ -69,9 +63,8 @@
 		3307269727D03B0D0034C695 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				330726C527D6E2140034C695 /* CustomButton.swift */,
-				330726C727D6E26D0034C695 /* CustomStackView.swift */,
-				330726C927DAAA240034C695 /* Alert.swift */,
+				3335FDA627ECAD3200E93C09 /* CreditView.swift */,
+				3335FDA827ECAD4600E93C09 /* PaypalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -79,6 +72,10 @@
 		3307269827D03B120034C695 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				330726CD27DC36CF0034C695 /* StringExtension.swift */,
+				330726C927DAAA240034C695 /* Alert.swift */,
+				3335FDAA27ECAFB400E93C09 /* CardError.swift */,
+				3335FDAC27ECB02B00E93C09 /* PaypalError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,10 +102,8 @@
 				3307269827D03B120034C695 /* Model */,
 				3307269727D03B0D0034C695 /* View */,
 				3307269627D03B020034C695 /* Controller */,
-				3307269527D03AF90034C695 /* Service */,
 				33C295EE27CC3082001CECE9 /* AppDelegate.swift */,
 				33C295F027CC3082001CECE9 /* SceneDelegate.swift */,
-				330726CD27DC36CF0034C695 /* StringExtension.swift */,
 				33C295F427CC3082001CECE9 /* Main.storyboard */,
 				33C295F927CC3084001CECE9 /* LaunchScreen.storyboard */,
 				33C295F727CC3084001CECE9 /* Assets.xcassets */,
@@ -188,15 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				330726C827D6E26D0034C695 /* CustomStackView.swift in Sources */,
+				3335FDA727ECAD3200E93C09 /* CreditView.swift in Sources */,
+				3335FDA927ECAD4600E93C09 /* PaypalView.swift in Sources */,
 				330726CE27DC36D00034C695 /* StringExtension.swift in Sources */,
 				33C295EF27CC3082001CECE9 /* AppDelegate.swift in Sources */,
-				330726C627D6E2140034C695 /* CustomButton.swift in Sources */,
-				330726C227D6D8CE0034C695 /* PayPalViewController.swift in Sources */,
+				3335FDAD27ECB02B00E93C09 /* PaypalError.swift in Sources */,
+				3335FDAB27ECAFB400E93C09 /* CardError.swift in Sources */,
 				330726C427D6D9100034C695 /* PaymentViewController.swift in Sources */,
 				33C295F127CC3082001CECE9 /* SceneDelegate.swift in Sources */,
 				330726CA27DAAA240034C695 /* Alert.swift in Sources */,
-				330726C027D6D8AF0034C695 /* CreditCardViewController.swift in Sources */,
+				3335FDA527ECA51600E93C09 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
