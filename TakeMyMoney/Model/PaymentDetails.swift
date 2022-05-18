@@ -1,9 +1,6 @@
-//
-//  PaymentDetails.swift
-//  TakeMyMoney
-//
-//  Created by Josue Cruz on 3/24/22.
-//
+
+
+
 
 import Foundation
 

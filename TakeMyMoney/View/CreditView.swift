@@ -5,7 +5,6 @@
 import UIKit
 
 class CreditView: UIView {
-    
     @IBOutlet weak var cardNumber: UITextField!
     @IBOutlet weak var cardExpirationDate: UITextField!
     @IBOutlet weak var cardCVV: UITextField!
