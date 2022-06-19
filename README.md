@@ -1,6 +1,6 @@
 # PAYMENT PROCESSING APP
 
-### In this app I show how well I can work with diffrent system controllers, alerts, and error handling.
+### In this app I show how well I can work with diffrent system controllers, alerts, and error handling. 
 
 ![Payment Processing App (1)](https://user-images.githubusercontent.com/82785695/167013573-558f18ae-fe90-4f48-b53d-aeee879c93d3.png)
 ![Payment Processing App (2)](https://user-images.githubusercontent.com/82785695/167013578-c82be7fd-ec60-4ad3-a8cd-f6b288c88ae9.png)
